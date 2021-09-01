@@ -12,7 +12,45 @@
 </head>
 
 <body>
-        <h1>Book</h1>
+    <header>
+
+    </header>
+    <!-- main start here -->
+    <main>
+
+        <section class="container">
+            <h2 class="text-center">Search Your Book</h2>
+            <!-- Book search area -->
+            <div class="input-group mb-3 w-50 mx-auto">
+                <input id="search-field" type="text" class="form-control" placeholder="Search the book you want"
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button onclick="searchBook()" class="btn btn-secondary" type="button" id="button-search">Search</button>
+            </div>
+    
+            <!-- Error and Spinner div -->
+            <div>
+                <h1 id="error-message" class="bg-dark text-center text-danger">Insert a valid name</h1>
+                <div id="spinner" class="spinner-grow" style="margin-left: 50%;" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+    
+            <!-- Book details -->
+            <div id="book-details" class="my-5  w-50 mx-auto shadow-lg">
+            </div>
+            <!-- Results found -->
+            <h1 class="bg-dark text-warning text-center" id="book-numbers"></h1>
+            <!-- Team search result -->
+    
+            <div id="search-result" class=" my-1 row row-cols-1 row-cols-md-3 g-4">
+            </div>
+        </section>
+
+    </main>
+     <!-- main ends here -->
+    <footer>
+
+    </footer>
 
 
     <!-- JavaScript Bundle with Popper -->
