@@ -1,6 +1,5 @@
 document.getElementById('error-message').style.display = 'none';
 document.getElementById('spinner').style.display = 'none';
-document.getElementById('book-details').textContent = ''
 
 // Search Book Handler
 const searchBook = () => {
@@ -15,7 +14,6 @@ const searchBook = () => {
     } else {
         document.getElementById('spinner').style.display = 'block';
         document.getElementById('error-message').style.display = 'none';
-        document.getElementById('book-details').textContent = '';
         document.getElementById('search-result').textContent = '';
         const url = `http://openlibrary.org/search.json?q=${searchText}`
         fetch(url)
@@ -23,15 +21,13 @@ const searchBook = () => {
             .then(data => displaySearchResult(data.docs))
     }
 
-}
+};
 
 
 const displayError = () => {
     document.getElementById('error-message').style.display = 'block';
     document.getElementById('spinner').style.display = 'none';
     document.getElementById('book-numbers').textContent = '';
-    document.getElementById('book-details').textContent = '';
-
 }
 
 // Display Search Result
