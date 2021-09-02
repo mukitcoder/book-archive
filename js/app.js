@@ -8,9 +8,10 @@ const searchBook = () => {
     searchField.value = "";
 
     // For Error Msg
-    if ((searchText === '') || (searchText === 'number'))  {
-        // please write something to display
+    if ((searchText === '') || (searchText > 0) || (searchText < 0)|| (searchText == 0)) {
+
         displayError();
+
     } else {
         document.getElementById('spinner').style.display = 'block';
         document.getElementById('error-message').style.display = 'none';
@@ -35,7 +36,8 @@ const displaySearchResult = docs => {
     const searchResult = document.getElementById('search-result');
     // console.log(docs);
     searchResult.textContent = '';
-    if (docs === null) {
+    
+    if ((docs === null) || (docs.length === 0)){
         displayError();
     } else {
         document.getElementById('error-message').style.display = 'none';
