@@ -8,7 +8,7 @@ const searchBook = () => {
     searchField.value = "";
 
     // For Error Msg
-    if ((searchText === '') || (searchText === 'number')) {
+    if ((searchText === '') || (searchText === 'number'))  {
         // please write something to display
         displayError();
     } else {
@@ -35,7 +35,7 @@ const displaySearchResult = docs => {
     const searchResult = document.getElementById('search-result');
     // console.log(docs);
     searchResult.textContent = '';
-    if (docs == null) {
+    if (docs === null) {
         displayError();
     } else {
         document.getElementById('error-message').style.display = 'none';
